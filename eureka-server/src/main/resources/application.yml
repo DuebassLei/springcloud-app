@@ -1,6 +1,6 @@
 spring:
   application:
-    name: springcloud-demo
+    name: eureka-server
 # 端口号
 server:
   port: 8000
