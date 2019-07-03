@@ -1,19 +1,24 @@
 # 《SpringCloud系列》学习笔记
 
-### 介绍
-SpringCloud学习笔记代码库
+### :smile:SpringCloud系列
 
-### SpringCloud系列
-#### 目录
-- Eureka服务注册与发现  >_<
+#### :pencil:目录
 
-#### 环境
-- Spring 2.1.4.RELEASE
+- 1.Eureka服务的注册与发现  >_<
+- 2.Ribbon客户端侧负载均衡（服务消费者）  >_<
+- 3.Feign（服务消费者）  >_<
+- 4.Hystrix 容错处理  >_<
+- 5.Zuul 服务网关   >_<
+
+
+
+#### :sparkles:环境
+
+- SpringCloud 2.1.4.RELEASE
 - Idea 2018
-- Java 1.8
+- Java JDK 1.8
 
-#### Find Me
+#### :star: Find Me
+
 - 简书
-```https://www.jianshu.com/u/6740c2a5866d```
-- 博客
-```https://duebasslei.gitee.io/```
+  ```https://www.jianshu.com/u/6740c2a5866d```
