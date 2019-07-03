@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,5 +30,12 @@ public class EurekaServiceApi {
         logger.info( "client services:"+client.getServices());
         return c;
     }
+
+    @Value("${server.port}")
+    String port;
+    @RequestMapping("/hi")
+    public String home(@RequestParam String name) {
+        return "hi "+name+",i am from port:" +port;
+}
 
 }
