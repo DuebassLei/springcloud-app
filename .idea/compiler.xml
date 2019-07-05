@@ -11,6 +11,7 @@
         <module name="eureka-server" />
         <module name="eureka-service" />
         <module name="feign-service" />
+        <module name="hystrix-dashboard" />
         <module name="ribbon-service" />
         <module name="zuul-service" />
       </profile>

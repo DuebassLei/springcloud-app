@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: hystrix-dashboard
+server:
+  port: 8776
+  # 暴露 endpoints
+  # Endpoints 中会包含很多敏感信息，除了 health 和 info 两个支持 web 访问外，其他的默认不支持 web 访问
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
