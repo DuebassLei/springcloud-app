@@ -1,0 +1,17 @@
+server:
+  port: 8771
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      name: config-server # config-server 名称
+      # 对应config-server 中的config-server-order-default.yml文件
+      # http 请求地址和资源映射对应如下：
+        #/{application}/{profile}[/{label}]
+        #/{application}-{profile}.yml
+        #/{label}/{application}-{profile}.yml
+        #/{application}-{profile}.properties
+        #/{label}/{application}-{profile}.properties
+      profile: order-default
+      uri: http://localhost:8770 # config-server中心项目地址

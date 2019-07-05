@@ -1,0 +1,25 @@
+#spring:
+#  application:
+#    name: config-server
+#  profiles:
+#    active:  ${profile:DEFAULT}
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://gitee.com/DuebassLei/springcloud-config/
+server:
+  port: 8770
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      name: config-server     #{application}
+      enabled: false
+      server:
+        health:
+          enabled: false
