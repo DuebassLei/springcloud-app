@@ -9,7 +9,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  * @Date: 2019/7/3 15:39
  */
 @SpringBootApplication
-@EnableConfigServer
+@EnableConfigServer //开启配置中心服务
 public class ConfigApp {
     public static void main(String[] args) {
         SpringApplication.run(ConfigApp.class,args);

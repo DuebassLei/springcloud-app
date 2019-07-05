@@ -14,12 +14,15 @@ server:
 spring:
   application:
     name: config-server
-  profiles:
-    active: native
+#  profiles:
+#    active: native # 开启此项则使用本地配置
   cloud:
     config:
-      name: config-server     #{application}
-      enabled: false
+      name: springcloud-config     #{application}
       server:
-        health:
-          enabled: false
+        git:
+          uri: http://11.11.150.35:30200/DuebassLei/springcloud-config.git
+          username: DuebassLei
+          password: x7471265291x
+#        health:
+#          enabled: false

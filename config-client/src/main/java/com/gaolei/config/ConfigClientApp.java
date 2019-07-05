@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date: 2019/7/5 12:20
  */
 @SpringBootApplication
-@EnableDiscoveryClient
 @RestController
 public class ConfigClientApp {
     public static void main(String[] args) {
