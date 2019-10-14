@@ -15,10 +15,10 @@
 #### :sparkles:环境
 
 - SpringCloud 2.1.4.RELEASE
-- Idea 2018
+- Idea 2019.2
 - Java JDK 1.8
 
 #### :star: Follow Me
 
-- 简书
-  ```https://www.jianshu.com/u/6740c2a5866d```
+- [CSDN博客](https://blog.csdn.net/m0_37903882)
+- [个人网站](https://www.gaosanshi.top)
