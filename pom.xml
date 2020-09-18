@@ -28,6 +28,7 @@
         <module>config-server</module>
         <module>config-client</module>
         <module>hystrix-dashboard</module>
+        <module>cloud-app</module>
     </modules>
     <dependencies>
         <dependency>

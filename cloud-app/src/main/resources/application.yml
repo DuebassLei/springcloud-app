@@ -1,9 +1,9 @@
 spring:
   application:
-    name: eureka-service
+    name: cloud-app
 # 端口号
 server:
-  port: 8762
+  port: 9999
 # eureka配置
 eureka:
   client:

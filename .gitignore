@@ -51,3 +51,4 @@ image/*
 *.sln
 
 *auto-config/*
+/.idea/

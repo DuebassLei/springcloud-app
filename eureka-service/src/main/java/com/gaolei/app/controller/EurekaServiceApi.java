@@ -24,6 +24,7 @@ public class EurekaServiceApi {
     private final Logger logger = LoggerFactory.getLogger(EurekaServiceApi.class);
     @Autowired
     private DiscoveryClient client;
+
     @RequestMapping(value = "/add",method=RequestMethod.GET)
     public Integer add(@RequestParam Integer a ,@RequestParam Integer b){
         Integer c = a+b;
@@ -33,6 +34,7 @@ public class EurekaServiceApi {
 
     @Value("${server.port}")
     String port;
+
     @RequestMapping("/hi")
     public String home(@RequestParam String name) {
         return "hi "+name+",i am from port:" +port;
