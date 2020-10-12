@@ -26,11 +26,16 @@ SpringCloud系列
 #### :star: Follow Me
 
 - [CSDN博客](https://blog.csdn.net/m0_37903882)
-- [个人网站](https://blog.gaosanshi.top)
+- [掘金](https://juejin.im/user/1890815729215294)
+- [个人网站github](https://blog.gaosanshi.top)
+- [个人网站国内gitee镜像站点](https://duebasslei.gitee.io/)
 
 
 ### :memo: logs
 - 2020/01/19 添加本地 `docker` 部署测试
 - 2020/09/18 添加学习模块`cloud-app`
 - 2020/09/21 返回结果、腾讯通发送消息及常用工具类
+- 2020/09/30 集成 elasticsearch
+- 2020/10/12 使用jxls导出excel
+
  
