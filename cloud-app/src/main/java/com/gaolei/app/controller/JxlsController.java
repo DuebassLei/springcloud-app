@@ -1,6 +1,7 @@
 package com.gaolei.app.controller;
 
-import com.gaolei.app.entity.Fish;
+import com.gaolei.app.entity.jxls.Employee;
+import com.gaolei.app.entity.jxls.Fish;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -17,6 +18,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -27,7 +29,7 @@ import java.util.List;
  */
 @Slf4j
 @Controller
-@Api(tags = "Jxls导出excel")
+@Api(tags = "Jxls")
 @RequestMapping(value = "/api/jxls")
 public class JxlsController {
     /**
@@ -36,7 +38,7 @@ public class JxlsController {
      * @param response
      * @exception IOException
      * */
-    @ApiOperation("根据模板导出excel")
+    @ApiOperation(value = "模板导出excel",notes = "基于模板导出excel文件")
     @PostMapping(value = "export")
     public void jxlsExport(HttpServletRequest request,HttpServletResponse response) throws IOException {
         log.info("Jxls excel simple demo");
@@ -80,4 +82,43 @@ public class JxlsController {
         }
     }
 
+
+    /**
+     * 带计算函数的excel
+     * @param request
+     * @param response
+     * @exception IOException
+     * */
+    @ApiOperation(value = "导出计算函数excel",notes = "带计算函数的excel")
+    @PostMapping(value = "formulasExport")
+    public void jxlsFormulasExport(HttpServletRequest request,HttpServletResponse response) throws IOException {
+        List<Employee> employees = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            Employee employee = new Employee();
+            employee.setName("张三"+i);
+            employee.setAge(15+i);
+            employee.setBirthDate(new Date());
+            employee.setPayment(1500.00);
+            employee.setBonus(15.00+i);
+            employees.add(employee);
+        }
+        InputStream is = new ClassPathResource("templates/formulas_template.xls").getInputStream();
+        OutputStream os = null;
+        try {
+            os = response.getOutputStream();
+            response.addHeader("Content-Disposition", "attachment;filename=" + "employeesInfo.xls");
+            response.setContentType("application/octet-stream");
+            Context context = new Context();
+            context.putVar("employees", employees);
+            JxlsHelper.getInstance().processTemplate(is, os, context);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            os.flush();
+            os.close();
+        }
+
+
+
+    }
 }

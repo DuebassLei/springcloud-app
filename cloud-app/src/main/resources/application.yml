@@ -27,10 +27,10 @@ eureka:
     hostname: localhost
 
 # ===== 自定义swagger配置 ===== #
-swagger:
-  enable: true
-  application-name: ${spring.application.name}
-  application-version: 1.0
-  application-description: Cloud-App Study Record
-  try-host: http://localhost:${server.port}
+#swagger:
+#  enable: true
+#  application-name: ${spring.application.name}
+#  application-version: 1.0
+#  application-description: Cloud-App Study Record
+#  try-host: http://localhost:${server.port}
 
