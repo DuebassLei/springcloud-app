@@ -8,13 +8,19 @@ spring:
       cluster-nodes: 10.172.96.135:9300
       repositories:
         enabled: true
-  # 数据库配置
+  # 数据库 配置
   datasource:
     url: jdbc:oracle:thin:@47.103.27.25:1521:xe
     username: cloud
     password: gaosanshi
     #   driver-class-name: com.mysql.jdbc.Driver
     driver-class-name: oracle.jdbc.driver.OracleDriver
+
+  # JPA 配置
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
 # 端口号
 server:
   port: 9999
